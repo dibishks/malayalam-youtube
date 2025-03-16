@@ -1,0 +1,1 @@
+{"ast":null,"code":"// Helper function to determine if id is string or object\nexport function isSearchResult(item) {\n  return typeof item.id === 'object';\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

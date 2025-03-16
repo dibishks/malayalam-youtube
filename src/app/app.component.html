@@ -1,0 +1,22 @@
+<div class="app-container">
+  <app-header></app-header>
+  
+  <main class="main-content">
+    <app-category-filter 
+      (searchOptionsChange)="onSearchOptionsChange($event)">
+    </app-category-filter>
+    
+    <app-video-grid 
+      [videos]="videos"
+      [isLoading]="isLoading"
+      (videoSelect)="onVideoSelect($event)"
+      (loadMore)="onLoadMore()">
+    </app-video-grid>
+  </main>
+
+  <app-video-player 
+    *ngIf="selectedVideo"
+    [video]="selectedVideo"
+    (close)="closeVideo()">
+  </app-video-player>
+</div> 
